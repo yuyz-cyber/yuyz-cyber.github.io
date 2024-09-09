@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Information Retrieval note | Yuyz-Cyber</title><meta name="author" content="yuyz"><meta name="copyright" content="yuyz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Information RetrievalChapter 10x00 Information Retrieval and Some ConceptThe Goal of Information Retrievalis to retrieve documents from a corpus that are relevant to the user’s information needs, whic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Information Retrieval note">
+<meta property="og:url" content="http://example.com/2024/09/09/Information-Retrieval-note/index.html">
+<meta property="og:site_name" content="Yuyz-Cyber">
+<meta property="og:description" content="Information RetrievalChapter 10x00 Information Retrieval and Some ConceptThe Goal of Information Retrievalis to retrieve documents from a corpus that are relevant to the user’s information needs, whic">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-09-09T14:02:06.000Z">
+<meta property="article:modified_time" content="2024-09-09T14:03:01.885Z">
+<meta property="article:author" content="yuyz">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/09/09/Information-Retrieval-note/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Information Retrieval note',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-09 22:03:01'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Yuyz-Cyber"><span class="site-name">Yuyz-Cyber</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Information Retrieval note</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-09-09T14:02:06.000Z" title="Created 2024-09-09 22:02:06">2024-09-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-09-09T14:03:01.885Z" title="Updated 2024-09-09 22:03:01">2024-09-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Information Retrieval note"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Information-Retrieval"><a href="#Information-Retrieval" class="headerlink" title="Information Retrieval"></a>Information Retrieval</h1><h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><h3 id="0x00-Information-Retrieval-and-Some-Concept"><a href="#0x00-Information-Retrieval-and-Some-Concept" class="headerlink" title="0x00 Information Retrieval and Some Concept"></a>0x00 Information Retrieval and Some Concept</h3><h4 id="The-Goal-of-Information-Retrieval"><a href="#The-Goal-of-Information-Retrieval" class="headerlink" title="The Goal of Information Retrieval"></a>The Goal of Information Retrieval</h4><p>is to retrieve documents from a corpus that are relevant to the user’s information needs, which are communicated to the system through a one-off query initiated by the user.</p>
+<h4 id="Definition-of-Information-Retrieval"><a href="#Definition-of-Information-Retrieval" class="headerlink" title="Definition of Information Retrieval"></a>Definition of Information Retrieval</h4><p>Information retrieval is the process of finding materials (usually documents) that meet the user’s information needs from a large collection of unstructured data (usually text), typically stored on computers.</p>
+<ul>
+<li><p><strong>Unstructured Data</strong>: Refers to data that lacks a clear and explicit semantic structure, making it difficult for computers to process.</p>
+</li>
+<li><p><strong>Structured Data</strong>: In contrast to unstructured data, such as relational databases.</p>
+</li>
+<li><p><strong>Semi-structured Data</strong>: Refers to data that includes format markers, such as web pages.</p>
+</li>
+</ul>
+<h4 id="Use-cases-of-Information-Retrieval"><a href="#Use-cases-of-Information-Retrieval" class="headerlink" title="Use cases of Information Retrieval"></a>Use cases of Information Retrieval</h4><ul>
+<li>Fast searching within large-scale document collections</li>
+<li>More flexible matching methods</li>
+<li>The need to rank results</li>
+</ul>
+<h5 id="Ad-hoc-retrieval-task"><a href="#Ad-hoc-retrieval-task" class="headerlink" title="Ad hoc retrieval task:"></a>Ad hoc retrieval task:</h5><p>A user’s information need is communicated to the system through a one-time query submitted by the user, and the system returns documents relevant to that query from a collection of documents.</p>
+<h4 id="How-to-Evaluating-the-effectiveness-of-a-retrieval-system-the-quality-of-search-results-："><a href="#How-to-Evaluating-the-effectiveness-of-a-retrieval-system-the-quality-of-search-results-：" class="headerlink" title="How to Evaluating the effectiveness of a retrieval system (the quality of search results)："></a>How to Evaluating the effectiveness of a retrieval system (the quality of search results)：</h4><p>using <strong>Precision</strong> and <strong>Recall</strong></p>
+<h3 id="some-nouns"><a href="#some-nouns" class="headerlink" title="some nouns"></a>some nouns</h3><ul>
+<li><h5 id="corpus"><a href="#corpus" class="headerlink" title="corpus"></a>corpus</h5></li>
+</ul>
+<p>A corpus is a large, structured text dataset used to support language processing tasks and research，also called (document) collection.</p>
+<ul>
+<li><h5 id="Term-document-incidence-matrix"><a href="#Term-document-incidence-matrix" class="headerlink" title="Term-document incidence matrix"></a>Term-document incidence matrix</h5></li>
+</ul>
+<p>The term-document incidence matrix is a binary matrix used in information retrieval and text mining to represent the presence or absence of terms within documents.</p>
+<p>Matrix element (t, d) is 1 if the play in column d contains the word in row t, and is 0 otherwise. Here is an example:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>D1</th>
+<th>D2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h3 id="0x01-inverted-index"><a href="#0x01-inverted-index" class="headerlink" title="0x01 inverted index"></a>0x01 inverted index</h3><p>In fact, the term-document matrix is typically sparse, so it is represented using an <strong>inverted index</strong>.</p>
+<p>An inverted index maps keywords (or terms) to a list of documents containing those keywords. The inverted index consists of a vocabulary (a list of terms) and an inverted list (a list of documents for each term). Each term in the vocabulary has an inverted list that enumerates all the documents containing that term and their positions within the documents.</p>
+<p><strong>Inverted Index Overview</strong>:</p>
+<ol>
+<li><p><strong>Vocabulary</strong>:</p>
+<ul>
+<li>The vocabulary is a list of terms that appear in the documents.</li>
+<li>Each term in the vocabulary has a unique identifier used to locate it in the inverted list.</li>
+</ul>
+</li>
+<li><p><strong>Inverted List</strong>:</p>
+<ul>
+<li>For each term in the vocabulary, there is an inverted list.</li>
+<li>The inverted list records all documents containing the term and the positions of the term within those documents (sometimes including the term’s frequency).</li>
+</ul>
+</li>
+</ol>
+<p><strong>How an Inverted Index Works</strong>:</p>
+<ol>
+<li><p><strong>Document Processing</strong>:</p>
+<ul>
+<li>Each document is tokenized into terms.</li>
+<li>Additional preprocessing steps may include removing stop words, stemming, etc.</li>
+</ul>
+</li>
+<li><p><strong>Building Vocabulary and Inverted Lists</strong>:</p>
+<ul>
+<li>Traverse all documents to build the vocabulary.</li>
+<li>For each term, create an inverted list that includes all documents containing the term and the term’s positions in those documents.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example</strong>:</p>
+<p>Suppose we have the following three documents:</p>
+<ol>
+<li>Document 1: “Information retrieval is an important field in computer science.”</li>
+<li>Document 2: “An inverted index is an efficient data structure.”</li>
+<li>Document 3: “Information retrieval technology is widely used in modern search engines.”</li>
+</ol>
+<p>After <strong>tokenization</strong>, we obtain the following terms（<strong>token</strong>）:</p>
+<ul>
+<li>“Information retrieval”</li>
+<li>“Computer science”</li>
+<li>“Important”</li>
+<li>“Field”</li>
+<li>“Inverted index”</li>
+<li>“Efficient”</li>
+<li>“Data structure”</li>
+<li>“Technology”</li>
+<li>“Modern”</li>
+<li>“Search engines”</li>
+<li>“Widely”</li>
+<li>“Used”</li>
+</ul>
+<p>The vocabulary and its corresponding inverted lists would be:</p>
+<ul>
+<li>“Information retrieval”: [Document 1, Document 3]</li>
+<li>“Computer science”: [Document 1]</li>
+<li>“Important”: [Document 1]</li>
+<li>“Field”: [Document 1]</li>
+<li>“Inverted index”: [Document 2]</li>
+<li>“Efficient”: [Document 2]</li>
+<li>“Data structure”: [Document 2]</li>
+<li>“Technology”: [Document 3]</li>
+<li>“Modern”: [Document 3]</li>
+<li>“Search engines”: [Document 3]</li>
+<li>“Widely”: [Document 3]</li>
+<li>“Used”: [Document 3]</li>
+</ul>
+<p><img src="C:\Users\zyy23\AppData\Roaming\Typora\typora-user-images\image-20240907170858130.png"></p>
+<p>For an in-memory inverted index, there are two effective storage methods:</p>
+<ol>
+<li><p><strong>Singly Linked List</strong>: This method facilitates the insertion and updating of documents (e.g., re-crawling updated web pages). By adding pointers, it can naturally extend to more advanced indexing strategies.</p>
+</li>
+<li><p><strong>Variable Length Array</strong>: On one hand, it saves space by avoiding the overhead of pointers. On the other hand, because it uses contiguous memory storage, it can leverage modern computer cache techniques to improve access speed.</p>
+</li>
+</ol>
+<h3 id="0x02-Boolean-retrieval-model"><a href="#0x02-Boolean-retrieval-model" class="headerlink" title="0x02 Boolean retrieval model"></a>0x02 Boolean retrieval model</h3><h4 id="Boolean-retrieval-model"><a href="#Boolean-retrieval-model" class="headerlink" title="Boolean retrieval model"></a><strong>Boolean retrieval model</strong></h4><p> Based on Boolean logic to handle query and document matching, it stores document relationships using vectors and constructs queries with Boolean operators (such as AND, OR, NOT).</p>
+<p>The <strong>intersection</strong> operation algorithm is very crucial:</p>
+<p><img src="C:\Users\zyy23\AppData\Roaming\Typora\typora-user-images\image-20240908143958543.png"></p>
+<h4 id="Query-optimization"><a href="#Query-optimization" class="headerlink" title="Query optimization"></a><strong>Query optimization</strong></h4><p>refers to organizing the query processing in a way that minimizes the workload. One key factor to consider when optimizing Boolean queries is the access order of the inverted index records.</p>
+<p><img src="C:\Users\zyy23\AppData\Roaming\Typora\typora-user-images\image-20240908144521364.png" alt="image-20240908144521364"></p>
+<h3 id="0x03-The-extended-Boolean-model-versus-ranked-retrieval"><a href="#0x03-The-extended-Boolean-model-versus-ranked-retrieval" class="headerlink" title="0x03 The extended Boolean model versus ranked retrieval"></a>0x03 The extended Boolean model versus ranked retrieval</h3><h4 id="ranked-retrieval-model"><a href="#ranked-retrieval-model" class="headerlink" title="ranked retrieval model"></a><strong>ranked retrieval model</strong></h4><p>Rank the retrieval results based on the relevance between documents and queries. In this model, each document is scored according to its match with the query, and then sorted by score from highest to lowest, returning the most relevant documents.</p>
+<p>such as : TF-IDF</p>
+<h4 id="proximity-operator"><a href="#proximity-operator" class="headerlink" title="proximity operator"></a><strong>proximity operator</strong></h4><p>is used to specify that two terms in a query should be close to each other within a document. The degree of proximity is usually measured by the number of words between the terms or whether they appear within the same structural unit (such as a sentence or paragraph).</p>
+<h4 id="A-common-issue-with-Boolean-search"><a href="#A-common-issue-with-Boolean-search" class="headerlink" title="A common issue with Boolean search"></a>A common issue with Boolean search</h4><p>is that results produced with the AND operator have high precision but low recall, while those produced with the OR operator have high recall but low precision. Finding a satisfactory compromise between these two metrics is difficult, if not impossible.</p>
+<h3 id="0x04-Summarize"><a href="#0x04-Summarize" class="headerlink" title="0x04 Summarize"></a>0x04 Summarize</h3><p>Chapter 1 introduces the need for information retrieval through the case of Shakespeare, highlighting the limitations of traditional relational databases in handling large document collections: the demand for fast retrieval, flexible matching methods, and the necessity of result ranking. The chapter then offers a comprehensive definition of information retrieval.</p>
+<p>For large-scale web documents, creating an index for all documents is essential. When users search with specific keywords, the system operates on the index to swiftly retrieve results, significantly reducing retrieval time and avoiding redundant computations.</p>
+<p>The chapter introduces two indexing methods: the term-document association matrix and the inverted index. Since the term-document matrix is often sparse, with many zero values, the inverted index is typically considered the more efficient choice.</p>
+<p>It also outlines the basic workflow of the information retrieval model, from tokenization and building the inverted index to simple query execution. Additionally, the chapter discusses common Boolean retrieval model, relevant algorithms, optimization techniques, and compares the strengths and weaknesses of AND and OR in terms of precision and recall.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">yuyz</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/09/09/Information-Retrieval-note/">http://example.com/2024/09/09/Information-Retrieval-note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/08/23/Linux-%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="Linux 学习入门指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">Linux 学习入门指南</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">yuyz</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Information-Retrieval"><span class="toc-number">1.</span> <span class="toc-text">Information Retrieval</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-1"><span class="toc-number">1.1.</span> <span class="toc-text">Chapter 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-Information-Retrieval-and-Some-Concept"><span class="toc-number">1.1.1.</span> <span class="toc-text">0x00 Information Retrieval and Some Concept</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Goal-of-Information-Retrieval"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">The Goal of Information Retrieval</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Definition-of-Information-Retrieval"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">Definition of Information Retrieval</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Use-cases-of-Information-Retrieval"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">Use cases of Information Retrieval</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Ad-hoc-retrieval-task"><span class="toc-number">1.1.1.3.1.</span> <span class="toc-text">Ad hoc retrieval task:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#How-to-Evaluating-the-effectiveness-of-a-retrieval-system-the-quality-of-search-results-%EF%BC%9A"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">How to Evaluating the effectiveness of a retrieval system (the quality of search results)：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#some-nouns"><span class="toc-number">1.1.2.</span> <span class="toc-text">some nouns</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#corpus"><span class="toc-number">1.1.2.0.1.</span> <span class="toc-text">corpus</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Term-document-incidence-matrix"><span class="toc-number">1.1.2.0.2.</span> <span class="toc-text">Term-document incidence matrix</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-inverted-index"><span class="toc-number">1.1.3.</span> <span class="toc-text">0x01 inverted index</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-Boolean-retrieval-model"><span class="toc-number">1.1.4.</span> <span class="toc-text">0x02 Boolean retrieval model</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Boolean-retrieval-model"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">Boolean retrieval model</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Query-optimization"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">Query optimization</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-The-extended-Boolean-model-versus-ranked-retrieval"><span class="toc-number">1.1.5.</span> <span class="toc-text">0x03 The extended Boolean model versus ranked retrieval</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ranked-retrieval-model"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">ranked retrieval model</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#proximity-operator"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">proximity operator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#A-common-issue-with-Boolean-search"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">A common issue with Boolean search</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x04-Summarize"><span class="toc-number">1.1.6.</span> <span class="toc-text">0x04 Summarize</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/09/Information-Retrieval-note/" title="Information Retrieval note">Information Retrieval note</a><time datetime="2024-09-09T14:02:06.000Z" title="Created 2024-09-09 22:02:06">2024-09-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/23/Linux-%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" title="Linux 学习入门指南">Linux 学习入门指南</a><time datetime="2024-08-23T04:46:21.000Z" title="Created 2024-08-23 12:46:21">2024-08-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/23/Conda-%E5%85%B3%E9%94%AE%E5%91%BD%E4%BB%A4/" title="Conda 关键命令">Conda 关键命令</a><time datetime="2024-08-23T04:45:01.000Z" title="Created 2024-08-23 12:45:01">2024-08-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/12/Bash-%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/" title="Bash 常见命令">Bash 常见命令</a><time datetime="2024-08-12T13:04:38.000Z" title="Created 2024-08-12 21:04:38">2024-08-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/08/Git-10%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="Git 10分钟快速入门">Git 10分钟快速入门</a><time datetime="2024-08-08T04:13:23.000Z" title="Created 2024-08-08 12:13:23">2024-08-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By yuyz</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
